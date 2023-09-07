@@ -1,5 +1,5 @@
-#include <studio.h>
-#include <unstd.h>
+#include  <studio.h>
+#include  <unstd.h>
 /**
  * main -A script that point a line to the standard error
  * Return: 1 (success)

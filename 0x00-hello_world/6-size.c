@@ -1,7 +1,7 @@
 #include <studio.h>
 /**
  * main-A program that prints the size of various types of computer it is compiled to run
- * Return 0(success)
+ * Return: 0(success)
  * int main(void)
  */
 {
