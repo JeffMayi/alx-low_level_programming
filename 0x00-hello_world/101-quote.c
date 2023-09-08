@@ -1,11 +1,10 @@
-#include  <studio.h>
 #include  <unstd.h>
 /**
  * main -A script that point a line to the standard error
- * Return: 1 (success)
+ * Return: always 0
  */
 int main(void)
 {
-	fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n",stdout);
-	Return (1);
+	fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stdout);
+	Return: (1);
 }
