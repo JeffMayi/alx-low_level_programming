@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-
+#include <stdio.h>
 /**
  * main-This is the main function
  * Return: Always 0
@@ -16,10 +16,16 @@
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 	if (n > 0)
-	printf("%d is positive\n", n);
-	else if (n < 0) 
-	print("%d is negative\n", n);
+	{
+	printf("%d\n",  "positive");
+	}
+	else if (n < 0)
+	{
+	print("%d\n",  "negative");
+	}
 	else
-	printf("%d is zero\n", n);
-	return (0);
+	{
+	printf("%d\n",  "zero");
+	}
+	return 0;
 }
