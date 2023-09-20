@@ -1,19 +1,16 @@
 #include <stdio.h>
 /**
  * main - print alphabets without char and use putchar
- *
- * Return: always (0); 
- *
+ * Return: always (0);
  */
 int main(void)
 {
-		int alphabets = '0';
-		while (alphabets <== '9')
-		{
-			putchar(alpabets);
-		putchar('\n');
-		}
-		return (0);
-}
-		
+	int alphabets = '0';
 
+	while (alphabets <= '9')
+	{
+		putchar(alpabets);
+		putchar('\n');
+	}
+	return (0);
+}
