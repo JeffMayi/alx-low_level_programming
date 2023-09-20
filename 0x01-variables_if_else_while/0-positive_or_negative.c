@@ -9,8 +9,8 @@
 #include <stdio.h>
 
 /* betty style doc for function main goes there */
-	int main(void)
-}
+int main(void)
+{
 	int n;
 
 	srand(time(0));
@@ -25,10 +25,12 @@
 	{
 	prinft("is zero", \n);
 	}
+	
 	else(n < 0)
 	{
 	printf("is negative", \n);
-	printf("\n");
 	}
+
+	printf("\n");
 	return (0);
 }
