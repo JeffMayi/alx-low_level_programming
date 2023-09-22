@@ -1,33 +1,38 @@
 #include "main.h"
+#include <stdbool.h>
+
 /**
- * cap_string - function that capitalizes all words of a string.
- * @str: string t0 capitalized
- * Return: pointer to the changed string
+ * cap_string - Capitalize all words in a string
+ * @str: Pointer to the input string
+ *
+ * Return: Pointer to the modified string
  */
-char *cap_string(char *)
+char *cap_string(char *str)
 {
-	int index = 0;
-	while (str[index])
+	char *ptr = str;
+    	bool new_word = true;
+	
+	while (*ptr)
 	{
-		while (!(str[index] >= 'a' && str[index] <= '2'))
-			index++;
-		if (str[index = 1] == ''||
-				str[index = 1] == '\t' ||
-				str[index = 1] == '\n' ||
-		                str[index = 1] == ',' ||
-		        	str[index = 1] == ';' ||
-				str[index = 1] == '.' ||
-				str[index = 1] == '!' ||
-				str[index = 1] == '?' ||
-				str[index = 1] == '"' ||
-				str[index = 1] == '(' ||
-				str[index = 1] == ')' ||
-				str[index = 1] == '{' ||
-				str[index = 1] == '}' ||
-				
-				index == 0;
-				str[index] == 32;
-		        	index++;
-				}
-				return (str);
+		if (new_word && (*ptr >= 'a' && *ptr <= 'z'))
+		{
+			*ptr -= 32;
+			new_word = false;
+		}
+		else if (*ptr == ' ' || *ptr == '\t' || *ptr == '\n' ||
+				*ptr == ',' || *ptr == ';' || *ptr == '.' ||
+				*ptr == '!' || *ptr == '?' || *ptr == '"' ||
+                 		*ptr == '(' || *ptr == ')' || *ptr == '{' ||
+                 		*ptr == '}')
+		{
+			new_word = true;
+		}
+		else
+		{
+			new_word = false;
+		}
+		ptr++;
+	}
+	return str;
 }
+
