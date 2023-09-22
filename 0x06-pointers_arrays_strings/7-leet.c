@@ -6,19 +6,26 @@
  */
 char *leet(char c)
 {
-	int i, j;
-
-	char 1[] = "a4eEo0tT1L";
-	char 2[] = "4433007711";
-	for (i = 0; n[i] != '\0'; i++)
+	char *ptr = str;
+   	char *leet_chars = "aAeEoOtTlL";
+    	char *leet_replacements = "443370711";
+	
+	while (*ptr)
 	{
-		for (j = 0; j < 10; j++)
+		int i = 0;
+        	int is_leet = 0;
+		while (leet_chars[i])
 		{
-			if (n[i] == s1[j])
-			{
-				n[i] = s2[j];
-			}
+			if (*ptr == leet_chars[i])
+				*ptr = leet_replacements[i];
+			is_leet = 1;
+			break;
 		}
+		i++;
 	}
-	return (n);
+	if (!is_leet)
+	{
+		ptr++;
+	}
+	return (str);
 }
