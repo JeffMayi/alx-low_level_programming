@@ -8,7 +8,7 @@ void print_line(int n)
 {
 	if (n <= 0)
 	{
-		putchar('\n')
+		putchar('\n');
 	}
 	else
 	{
@@ -18,6 +18,6 @@ void print_line(int n)
 		{
 			putchar('_');
 		}
-		putchar('\n')
+		putchar('\n');
 	}
 }
