@@ -1,26 +1,26 @@
 #include "main.h"
+
 /**
- * print_square - print a squire, followed by new line
- * @size: size of the squire
+ * print_square - Print a square of '#' characters on the terminal
+ * @size: The size of the square
  */
 void print_square(int size)
 {
+	int row, col;
+	
 	if (size <= 0)
 	{
-	_putchar
+		putchar('\n');
+		return;
 	}
-	else
+	for (row = 0; row < size; row++)
 	{
-	int i,j
-	for (i = 0; i < size; i++)
-	{
-	for (j = 0; j < size; j++)
-	{
-	-putchar('#');
+        for (col = 0; col < size; col++)
+        {
+		putchar('#');
+        }
+	putchar('\n');
 	}
-	_putchar('\n');
-	}
-	}
-
 }
+
 	
