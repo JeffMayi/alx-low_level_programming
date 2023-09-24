@@ -9,7 +9,7 @@ int main(void)
 
 	while (alphabets <= '9')
 	{
-		putchar(alpabets);
+		putchar(alphabets);
 		putchar('\n');
 	}
 	return (0);
