@@ -1,12 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
-
+#include <string.h>
 #include <stdio.h>
-#include <unistd.h>
-/**
- * main - prototypes of all functions
- * return: always 0 (success)
- */
+#include <stdlib.h>
+
+int _putchar(char c);
 void reset_to_98(int *n);
 void swap_int(int *a, int *b);
 int _strlen(char *s);
@@ -18,6 +16,4 @@ void puts_half(char *str);
 void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
 int _atoi(char *s);
-int main(void);
-
-#endif/* MAIN_H */
+#endif
