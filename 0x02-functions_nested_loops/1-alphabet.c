@@ -1,21 +1,17 @@
 #include "main.h"
+#include "_putchar.h"
 /**
- * main - program that prints the alphabetic in loweercase
- * Return: always 0
+ * print_alphabet - print alphabet number in lowercase
  */
 void print_alphabet(void)
 {
-	int i;
-	char letter;
+	int alph = 'a';
 
-	for (i = 0; i < 10; i++)
+	while (alph <= 'z')
 	{
-		letter = 'a';
-		while (letter <= 'z')
-		{
-			_putchar(letter);
-			letter++;
-		}
-		_putchar('\n');
+		_putchar(alph);
+		alph++;
+
 	}
+	_putchar('\n');
 }
