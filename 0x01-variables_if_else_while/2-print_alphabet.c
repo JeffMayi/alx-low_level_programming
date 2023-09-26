@@ -1,16 +1,21 @@
-#include <studio.h>
+#include <stdio.h>
+
 /**
- * main -entry point
- * decription: Print alphabet
- * Return: always 0
+ * main - Entry point
+ * Description: putchar , while
+ * Return: Always 0 (Sucess)
  */
 int main(void)
-	int n = 97:
-	while(n <= 122)
-	{
-		putcharn(n);
-		n++;
-	}
-	putchar("\n");
+{
+	int alph = 97;
 
-	Return(0);
+	while (alph <= 122)
+	{
+		putchar(alph);
+		alph++;
+
+	}
+	putchar('\n');
+	return (0);
+
+}
