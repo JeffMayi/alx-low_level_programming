@@ -1,38 +1,53 @@
 #include "main.h"
-#include <stdbool.h>
 
 /**
- * cap_string - Capitalize all words in a string
- * @str: Pointer to the input string
- *
- * Return: Pointer to the modified string
+ * checksap - check if letter is saperater
+ * @c: char to check
+ * Return: 1 if true else 0
+ */
+int checksap(char c)
+{
+
+	char sap[] = " \t\n,.!?\"(){}";
+	int i = 0;
+
+	while (i < 12)
+	{
+		if (c == sap[i])
+		{
+			return (1);
+		}
+		i++;
+	}
+	return (0);
+}
+
+/**
+ * *cap_string - captialize the first letter of word
+ * after a saperater
+ * @str: string to capialize
+ * Return: string after modify
  */
 char *cap_string(char *str)
 {
+
+	int prevoiusvalue = 1;
 	char *ptr = str;
-    	bool new_word = true;
-	
-	while (*ptr)
+
+	while (*str)
 	{
-		if (new_word && (*ptr >= 'a' && *ptr <= 'z'))
+		if (checksap(*str))
+			prevoiusvalue = 1;
+		else if (islower(*str) && prevoiusvalue)
 		{
-			*ptr -= 32;
-			new_word = false;
-		}
-		else if (*ptr == ' ' || *ptr == '\t' || *ptr == '\n' ||
-				*ptr == ',' || *ptr == ';' || *ptr == '.' ||
-				*ptr == '!' || *ptr == '?' || *ptr == '"' ||
-                 		*ptr == '(' || *ptr == ')' || *ptr == '{' ||
-                 		*ptr == '}')
-		{
-			new_word = true;
+			*str -= 32;
+			prevoiusvalue = 0;
 		}
 		else
-		{
-			new_word = false;
-		}
-		ptr++;
-	}
-	return str;
-}
+			prevoiusvalue = 0;
 
+		str++;
+	}
+	return (ptr);
+
+}

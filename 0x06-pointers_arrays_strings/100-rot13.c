@@ -1,31 +1,35 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * rot13 - encoder rot13
- * @s: pointer to string params
- *
- * Return: *s
+ * *rot13 - shift char by 13 positon
+ * @str: string to shift
+ * Return: pointer of the str
  */
-
-char *rot13(char *s)
+char *rot13(char *str)
 {
-	int i;
-	int j;
-	char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	/* remember the capital -32*/
+	char alph0[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char alph13rot[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char *ptr = str;
+	int i = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	/* loop each string */
+	while (*str)
 	{
-		for (j = 0; j < 52; j++)
+		/*search the character in alph0*/
+		while (i < 52)
 		{
-			if (s[i] == data1[j])
+			/* check the char capital or small */
+			if (*str == alph0[i])
 			{
-				s[i] = datarot[j];
+				*str = alph13rot[i];
 				break;
 			}
+			i++;
 		}
+		str++;
+		i = 0;
 	}
-	return (s);
-}
+	return (ptr);
 
+}
