@@ -1,26 +1,35 @@
 #include "main.h"
 
 /**
- * print_square - Print a square of '#' characters on the terminal
- * @size: The size of the square
+ * print_square - function that prints a square
+ * followed by a new line.
+ * @size: size of the triangle
  */
+
 void print_square(int size)
 {
-	int row, col;
-	
+	int i = 0;
+	int hash = 0;
+
 	if (size <= 0)
 	{
-		putchar('\n');
+		_putchar('\n');
 		return;
 	}
-	for (row = 0; row < size; row++)
-	{
-        for (col = 0; col < size; col++)
-        {
-		putchar('#');
-        }
-	putchar('\n');
-	}
-}
 
-	
+	while (i < size)
+	{
+
+		/* print the # it's normal for loop */
+		while (hash < size)
+		{
+			_putchar('#');
+			hash++;
+		}
+		_putchar('\n');
+		hash = 0;
+		i++;
+	}
+
+
+}	
