@@ -1,27 +1,32 @@
-#include "main.h"
-
+#include <stdio.h>
 /**
- * leet - encodes a string into 1337
- * @s: input string
- * Return: encoded string
+ * *leet - encode string into 1337
+ * @str: string to encode
+ * Return: pointer of str
  */
 
-char *leet(char *s)
+char *leet(char *str)
 {
-	int i, j;
-	int find[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-	int replacer[] = {'4', '3', '0', '7', '1'};
+	char *ptr = str;
+	char keys[] = {'a', 'e', 'o', 't', 'l'};
+	char values[] = {'4', '3', '0', '7', '1'};
+	int lenkey = 5;
+	int i = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (*str)
 	{
-		for (j = 0; j <= 9; j++)
+		while (i < lenkey)
 		{
-			if (s[i] == find[j])
+			if (*str == keys[i] || *str == keys[i] - 32)
 			{
-				s[i] = replacer[j / 2];
-				j = 9;
+
+				*str = values[i];
 			}
+			i++;
 		}
+	str++;
+	i = 0;
 	}
-	return (s);
+	return (ptr);
 }
+
