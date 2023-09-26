@@ -1,18 +1,19 @@
 #include <stdio.h>
 /**
- * main - print numbers of base ten
- *
- * Return:alwqys (0)
- *
+ * main - Entry point
+ * Description: while , comparisons
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char base_ten = '0';
-	while (base_ten <= '9')
+	int digit = 48;
+
+	while (digit <= 57)
 	{
-	putchar(base_ten);
-	base_ten++;
+		putchar(digit);
+		digit++;
 	}
 	putchar('\n');
 	return (0);
+
 }	
